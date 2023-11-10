@@ -62,4 +62,5 @@ Now = datetime.now()
 Date = Now.strftime("%m/%d/%Y")
 Time = Now.strftime("%H:%M:%S")
 
-print(Date, Time, HDC302xRead())
+TemperatureCelcius, HumidityPercent = HDC302xRead()
+print(f"{Date} {Time} Temperature={TemperatureCelcius: .2f}°C   Relitive humidity={HumidityPercent: .2f}%")
